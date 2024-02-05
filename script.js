@@ -1,3 +1,9 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+
 function circleMouseFollower(xscale, yscale) { 
     window.addEventListener("mousemove", function (dets) {
       document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
@@ -42,6 +48,8 @@ function circleMouseFollower(xscale, yscale) {
         left: dets.clientX,
         rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
       });
+
+        
     });
   });
   
